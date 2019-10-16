@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var validaAluno_1 = require("./validaAluno");
+var alunos_1 = require("./alunos");
+var _ = require("lodash");
+console.log(_.pad("Typescript Examples", 40, "="));
+var novoAluno = new alunos_1.aluno("Frederico Hemmer");
+novoAluno.saudacao();
+var adiciona = new validaAluno_1.validaNotaAluno();
+adiciona.saudacao();
+var validacao = function (novoAluno) { return (novoAluno.portugues + novoAluno.matematica + novoAluno.geografia) / 3 > 69; };
+console.log("O aluno foi aprovado nas disciplinas? " + (validacao(adiciona) ? "Sim" : "Não"));
